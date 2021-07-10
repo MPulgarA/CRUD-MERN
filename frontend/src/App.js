@@ -60,7 +60,15 @@ function App() {
         <Route
           exact 
           path="/editar/:id"
-          component={()=> <EditarCliente guardarConsultar={guardarConsultar}/>}
+          render={(props)=>{
+            const pedido = pedidos.filter(pedido => pedido._id === props.match.params.id);
+            return (
+              <EditarCliente 
+                pedido={pedido[0]}
+                guardarConsultar={guardarConsultar}
+              />
+            )
+          }}
         />
         
         

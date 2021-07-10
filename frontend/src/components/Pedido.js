@@ -4,7 +4,7 @@ import clienteAxios from '../config/axios';
 import Swal from 'sweetalert2';
 
 
-const Pedido = (props, ) => {
+const Pedido = (props) => {
 
     if(!props.pedido){
         props.history.push('/');
@@ -43,7 +43,7 @@ const Pedido = (props, ) => {
 
 
     const editarCliente = id =>{
-        props.history.push('/editar');
+        props.history.push(`/editar/${id}`);
     }
 
     return ( 
@@ -78,7 +78,7 @@ const Pedido = (props, ) => {
                                     <button 
                                         type="button" 
                                         className="btn btn-success mt-3 w-25 p-3 font-weight-bold"
-                                        onClick={()=>editarCliente()}
+                                        onClick={()=>editarCliente(_id)}
                                     > 
                                         Actualizar 
                                     </button>
