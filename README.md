@@ -1,6 +1,4 @@
 # CRUD-MERN
-
-## CRUD MERN
 ### Aplicación Web Sencilla de Pedidos de Pizza
 La aplicación es capaz de:
 
