@@ -3,6 +3,7 @@ import { Route, Switch,BrowserRouter as Router} from 'react-router-dom';
 import Clientes from './components/Clientes';
 import NuevoCliente from './components/NuevoCliente';
 import Pedido from './components/Pedido';
+import EditarCliente from './components/EditarCliente';
 
 import clienteAxios from './config/axios';
 
@@ -55,6 +56,13 @@ function App() {
             )
           }}
         />
+
+        <Route
+          exact 
+          path="/editar/:id"
+          component={()=> <EditarCliente guardarConsultar={guardarConsultar}/>}
+        />
+        
         
       </Switch>
     </Router>

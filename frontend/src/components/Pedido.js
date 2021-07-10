@@ -13,7 +13,7 @@ const Pedido = (props, ) => {
 
     const {pedido: {nombre, fecha, hora, pedido, _id}} = props;
 
-    const eliminarCita = id =>{
+    const eliminarCliente = id =>{
             Swal.fire({
                 title: 'Seguro de lo que haces?',
                 text: "Si se elimina, se perdera, c'est fini",
@@ -42,6 +42,10 @@ const Pedido = (props, ) => {
     }
 
 
+    const editarCliente = id =>{
+        props.history.push('/editar');
+    }
+
     return ( 
         <>
             <h1 className="my-5">Pedido: {nombre}</h1>
@@ -65,7 +69,7 @@ const Pedido = (props, ) => {
                                     <button 
                                         type="button" 
                                         className="btn btn-danger mt-3 w-25 p-3 font-weight-bold"
-                                        onClick={()=>eliminarCita(_id)}
+                                        onClick={()=>eliminarCliente(_id)}
                                     > 
                                         Eliminar 
                                     </button> 
@@ -74,7 +78,7 @@ const Pedido = (props, ) => {
                                     <button 
                                         type="button" 
                                         className="btn btn-success mt-3 w-25 p-3 font-weight-bold"
-                                        onClick={()=>eliminarCita(_id)}
+                                        onClick={()=>editarCliente()}
                                     > 
                                         Actualizar 
                                     </button>
