@@ -1,0 +1,47 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #4EA8DE; 
+    background: -webkit-linear-gradient(to right, #4EA8DE, #48BFE3);  
+    background: linear-gradient(to right, #4EA8DE, #48BFE3); 
+    font-size: 1.6rem;
+}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Noto Sans';
+    color: white;
+    font-size: 4rem;
+}
+
+h3 {
+    font-family: 'Noto Sans';
+    color:#64DFDF;
+    font-size: 2.4rem;
+}
+
+.lista{
+    border-radius:8px
+}
+
+.btn {
+    font-family: 'Noto Sans';
+    font-size:1.4rem;
+    border-radius: 8px;
+}
+
+
+.list-group-item:hover {
+    background:#F8F8F8;
+}
+
+form {
+    border-radius: 8PX;
+}
